@@ -5,12 +5,12 @@ import com.google.gwt.user.client.rpc.IsSerializable;
 public class Point implements IsSerializable
 {
 
-    public int x, y;
+    public double x, y;
 
     public Point()
     {}
 
-    public Point(int x, int y)
+    public Point(double x, double y)
     {
         this.x = x;
         this.y = y;
@@ -21,7 +21,7 @@ public class Point implements IsSerializable
         this(p.x, p.y);
     }
 
-    public Point add(int x, int y)
+    public Point add(double x, double y)
     {
         this.x += x;
         this.y += y;
