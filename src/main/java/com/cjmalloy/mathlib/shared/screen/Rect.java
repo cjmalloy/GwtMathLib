@@ -1,19 +1,20 @@
-package com.cjmalloy.mathlib.shared.linear;
+package com.cjmalloy.mathlib.shared.screen;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
+
 
 public class Rect implements IsSerializable
 {
 
-    public double x;
-    public double y;
-    public double width;
-    public double height;
+    public int x;
+    public int y;
+    public int width;
+    public int height;
 
     public Rect()
     {}
 
-    public Rect(double x, double y, double width, double height)
+    public Rect(int x, int y, int width, int height)
     {
         this.x = x;
         this.y = y;
@@ -28,8 +29,8 @@ public class Rect implements IsSerializable
 
     public Rect boundingRect(Rect r)
     {
-        double ux = Math.min(r.x, x);
-        double uy = Math.min(r.y, y);
+        int ux = Math.min(r.x, x);
+        int uy = Math.min(r.y, y);
         width = Math.max(r.x + r.width, x + width) - ux;
         height = Math.max(r.y + r.height, y + height) - uy;
         x = ux;
@@ -37,10 +38,10 @@ public class Rect implements IsSerializable
         return this;
     }
 
-    public boolean contains(double x, double y)
+    public boolean contains(int x, int y)
     {
         return x > this.x &&x < this.x + this.width &&
-                y > this.y && y < this.y + this.height;
+               y > this.y && y < this.y + this.height;
     }
 
     public boolean contains(Point p)
