@@ -1,6 +1,6 @@
 package com.cjmalloy.math.shared.screen;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
+import java.io.Serializable;
 
 /**
  * Rectangle model that uses integer values.
@@ -14,7 +14,7 @@ import com.google.gwt.user.client.rpc.IsSerializable;
  * Rect newRect = oldRect.copy().boundingRect(r);
  * </code>
  */
-public class Rect implements IsSerializable {
+public class Rect implements Serializable {
 
   public int x;
   public int y;

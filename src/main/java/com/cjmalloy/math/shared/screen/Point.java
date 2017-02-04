@@ -1,6 +1,6 @@
 package com.cjmalloy.math.shared.screen;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
+import java.io.Serializable;
 
 /**
  * Point model that uses integer values.
@@ -14,7 +14,7 @@ import com.google.gwt.user.client.rpc.IsSerializable;
  * Point newPoint = oldPoint.copy().add(1, 2);
  * </code>
  */
-public class Point implements IsSerializable {
+public class Point implements Serializable {
 
   public int x;
   public int y;

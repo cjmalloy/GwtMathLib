@@ -1,6 +1,6 @@
 package com.cjmalloy.math.shared.linear;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
+import java.io.Serializable;
 
 /**
  * Vector model that uses floating point values.
@@ -14,7 +14,7 @@ import com.google.gwt.user.client.rpc.IsSerializable;
  * Vec2d newVec = oldVec.copy().add(1, 2);
  * </code>
  */
-public class Vec2d implements IsSerializable {
+public class Vec2d implements Serializable {
 
   public double x;
   public double y;

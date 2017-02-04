@@ -1,6 +1,6 @@
 package com.cjmalloy.math.shared.linear;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
+import java.io.Serializable;
 
 /**
  * Rectangle model that uses floating point values.
@@ -14,7 +14,7 @@ import com.google.gwt.user.client.rpc.IsSerializable;
  * Rectangle newRect = oldRect.copy().boundingRect(r);
  * </code>
  */
-public class Rectangle implements IsSerializable {
+public class Rectangle implements Serializable {
 
   public double x;
   public double y;
